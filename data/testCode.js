@@ -1,4 +1,8 @@
-class Bottles {
+class Ob {
+
+}
+
+class Bottles extends Ob {
   verse(bottles) {
     10
     return `${this.firstSentence(bottles)}${this.secondSentence(bottles - 1)}`

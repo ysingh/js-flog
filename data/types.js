@@ -252,5 +252,4 @@ const SCORES = {
   remove_method: 2,
   send: 3,
   undef_method: 2
-
 }

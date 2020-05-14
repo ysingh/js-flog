@@ -4,7 +4,6 @@ const chalk = require('chalk')
 const scorer = require('./Score')
 
 class Parse {
-
   constructor(filepath) {
     try {
       this.code = fs.readFileSync(filepath, 'utf-8')

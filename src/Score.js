@@ -3,15 +3,12 @@ const SCORES = {
   ClassMethod: 1,
   BlockStatement: 1,
   FunctionDeclaration: 1,
-
 }
 
 const chalk = require('chalk')
 
 class Score {
   score(node) {
-    console.log(`Node type ${node.type} SCORE: ${SCORES[node.type]}`)
-
     if (this.isFunction(node)) return this.scoreFunction(node)
 
     switch(node.type) {
@@ -25,7 +22,7 @@ class Score {
         return 0
         break
     }
-    return SCORES[node.type] || 0
+    // return SCORES[node.type] || 0
   }
 
   scoreExpressionStatement(node) {
@@ -41,10 +38,14 @@ class Score {
   }
 
   scoreClassDeclaration(node) {
+    if (node.superClass) {
+      return 5
+    }
+    return 1
   }
 
-  isFunction(node) {
-    return node.type === 'ClassMethod' || node.type === 'FunctionDeclaration' || node.type === 'ArrowFunctionExpression'
+  isFunction({ type }) {
+    return type === 'ClassMethod' || type === 'FunctionDeclaration' || type === 'ArrowFunctionExpression'
   }
 }
 
