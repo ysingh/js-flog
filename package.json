@@ -1,0 +1,32 @@
+{
+  "name": "@ysingh/js-flog",
+  "version": "1.0.0",
+  "description": "Flog for javascript - Code metrics",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https:://github.com/ysingh/js-flog",
+  "repository": "https:://github.com/ysingh/js-flog",
+  "bin": {
+    "@ysingh/js-flog": "bin/js-flog",
+    "js-flog": "bin/js-flog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "js-flog"
+  ],
+  "author": "Yudhishthir Singh",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.9.6",
+    "@babel/traverse": "^7.9.6",
+    "chalk": "^4.0.0"
+  },
+  "engines": {
+    "node": "=14"
+  }
+}
